@@ -41,8 +41,12 @@ parser.add_argument('--dataroot', default='../hospital_data/', type=str, help='d
         valset = DatasetWrapper(datasets.ImageFolder(root=test_dataset_dir, transform=transform_test))
 ```
 
-5、在dataset.py上运行后实验结果如下：
+5、在实验命令结果如下：
+'''
+python3 train.py --sgpu 0 --lr 0.1 --epoch 200 --model resnet34 --decay 1e-4 -cls --lamda 1
+'''
 
+6、实验结果如下：
 ```
 Best Accuracy : 49.5934944152832
 ```
